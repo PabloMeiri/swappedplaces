@@ -185,7 +185,7 @@
               </div>
               <div class="span4">
                 <div class="linediv-c">
-                  <h3>$<%= bc_sum %></h3> <p>of $250</p>
+                  <h3 id="#amount"></h3> <p>of $250</p>
                 </div>
               </div>
               <div class="span4">
@@ -334,8 +334,9 @@
      	    timeLeft = (BigDay.getTime() - today.getTime());
             e_daysLeft = timeLeft / msPerDay;
             daysLeft = Math.floor(e_daysLeft);
-
+	    amount = Math.floor(<%= bc_sum %>*10000)/10000;
             $("#countdown").text(daysLeft);
+	    $("#amount").text(amount);
   	 });
       </script>
  </body>
